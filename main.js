@@ -1,7 +1,6 @@
 const questionContents = document.querySelectorAll('.question-content')
 const answerContainer = questionContents[questionContents.length - 1]
-const answers = [...answerContainer.children]
+const adsContainer = answerContainer.nextSibling.nextSibling
 
-answers.forEach((p) => {
-    console.log(p.textContent)
-})
+adsContainer.style.display = 'none'
+answerContainer.setAttribute('style', 'max-height: none')
